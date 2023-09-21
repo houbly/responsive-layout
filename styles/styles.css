@@ -1,0 +1,154 @@
+/* Simple CSS Reset - removes default padding, margins, borders and sets border-box */
+*, *::before, *::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%; /* set base html font size to 10px - makes calculating rem sizes easier */
+	font-family: 'Work Sans', sans-serif;
+  background-color: #222;
+}
+
+body {
+  font-size: 1.6rem;
+	line-height: 1.5;
+	font-weight: 300;
+	color: #fff;
+  /* Flex layout rules to make content always  */
+	min-height: 100vh;
+	display: flex;
+  flex-direction: column;
+}
+
+main {
+	flex-grow: 1; /* Makes the main content section take up all of the vertical space between the header and footer */
+	background-color: #333;
+}
+
+/* Presentational styles */
+h1,
+h2,
+h3 {
+	margin-bottom: 0.5em;
+	font-weight: 400;
+}
+
+p:not(:last-child) {
+	margin-bottom: 1em;
+}
+
+button {
+	font-family: inherit;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	border-radius: 0.5rem;
+}
+
+img:not(:last-child) {
+	margin-bottom: 1rem;
+}
+
+.header {
+	background-color: #222;
+	position: relative;
+	z-index: 1;
+	padding: 1rem 0;
+}
+
+.logo {
+	padding: 1rem;
+	background-color: #000;
+	color: #fff;
+	border-radius: 1rem;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-decoration: none;
+	display: inline-block;
+	line-height: 1;
+}
+
+.main-content {
+	padding-bottom: 4rem;
+}
+
+.footer {
+	background-color: #222;
+}
+
+.footer-content {
+	padding: 1rem;
+}
+
+/* Container styles */
+.container {
+	max-width: 1120px;
+	margin: 0 auto;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.container-fluid {
+	padding: 2rem 0;
+	margin: 0 2rem;
+}
+
+/* Base flex/grid item styles */
+.col, .grid-item {
+	padding: 2rem;
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 1rem;
+}
+
+/* Hero styles */
+.hero {
+	aspect-ratio: 2 / 1;
+	background: url(https://images.unsplash.com/photo-1694893344998-2e6cf5c28681?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2664&q=80) center no-repeat;
+	background-size: cover;
+	margin-bottom: 4rem;
+	display: flex;
+	align-items: center;
+	font-size: 2em;
+}
+
+/* Base nav styles */
+.nav-bar ul li {
+	list-style: none;
+}
+
+.nav-bar ul li a {
+	display: block;
+	padding: 1rem;
+	color: currentColor;
+	text-decoration: none;
+}
+
+@media (max-width: 799px) {
+  /* Small screen only styles */
+
+  /* Off screen nav-bar styles here */
+
+  /* Space items on small screen */
+	.col, .grid-item {
+		margin-bottom: 2rem;
+	}
+}
+
+/* Add larger screen only styles here */
+
+      /* Hide mobile nav on desktop */
+
+      /* Flex layout rules */
+
+      /* Give columns percentage widths */
+
+      /* Grid layout rules */
+  
+
+/* Helper classes */
