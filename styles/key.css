@@ -1,0 +1,127 @@
+
+/* KEY STYLES */
+
+.key {
+	background: #111;
+	position: fixed;
+	right: 1rem;
+	bottom: 1rem;
+	border-radius: 1rem;
+	overflow: hidden;
+}
+
+.key-toggle {
+	display: block;
+	width: 100%;
+	color: currentColor;
+	background: none;
+	padding: 1rem;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 1.6rem;
+}
+
+.key ul {
+	display: none;
+}
+
+.key-active .key ul {
+	display: block;
+}
+
+.key ul li {
+	list-style-type: none;
+	border-top: 1px solid #ffffff55;
+}
+
+.key ul li button {
+	display: flex;
+	align-items: center;
+	padding: 1rem;
+	background: none;
+	color: #fff;
+	font-size: 1.4rem;
+	cursor: pointer;
+	width: 100%;
+}
+
+.key ul li button:hover {
+	background-color: darkblue;
+}
+
+.key ul li button::before {
+	content: "";
+	display: block;
+	width: 0.75em;
+	height: 0.75em;
+	margin-right: 1rem;
+	border: 1px solid currentColor;
+	border-radius: 4px;
+}
+
+.key ul li button.active {
+	font-weight: bold;
+	border-left: 5px solid;
+}
+
+.key ul li button.active::before {
+	background: currentColor;
+}
+
+.key .fxi::before {
+	color: lightblue;
+}
+
+.key .fxc::before {
+	color: hotpink;
+}
+
+.key .gdc::before {
+	color: limegreen;
+}
+
+.key .gdi::before {
+	color: red;
+}
+
+.key .fic::before {
+	color: yellow;
+}
+
+@media (min-width: 800px) {
+  .key-active.fxc-active .row, .key-active.fxc-active .hero {
+    outline: 2px solid hotpink;
+    outline-offset: 4px;
+  }
+  .key-active.fxc-active .hero {
+    outline-offset: -4px;
+  }
+
+  .key-active.fxi-active .row > *, .key-active.fxi-active .hero > * {
+    outline: 2px solid lightblue;
+  }
+
+  .key-active.gdc-active .grid {
+    outline: 2px solid limegreen;
+    outline-offset: 4px;
+  }
+
+  .key-active.gdi-active .grid > * {
+    outline: 2px solid red;
+  }
+}
+.key-active.fic-active .container {
+	outline: 2px solid yellow;
+	outline-offset: 6px;
+}
+
+.key-active.flc-active .container-fluid {
+	outline: 2px solid white;
+	outline-offset: 6px;
+}
+
+@media (max-width: 799px) {
+	.hide-mobile {
+		display: none;
+	}
+}
